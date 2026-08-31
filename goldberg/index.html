@@ -86,6 +86,26 @@
   .motto-arrow{color:#3ba7ce;font-weight:700;font-size:0.9rem;}
   .motto-loop{font-size:0.78rem;color:#5C5347;font-style:italic;width:100%;margin-top:7px;}
 
+  /* phase 1: the fixed list of 12 mechanisms */
+  .mech-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:2px 20px;margin-top:16px;counter-reset:none;}
+  .mech-list li{display:flex;align-items:baseline;gap:11px;padding:8px 2px;border-bottom:1px solid rgba(42,36,32,0.09);}
+  .mech-num{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:0.7rem;font-weight:700;color:#3ba7ce;flex-shrink:0;}
+  .mech-name{font-size:0.93rem;color:#2A2420;line-height:1.45;}
+
+  .sort-box{margin-top:20px;background:#F6F1E6;border:1px dashed rgba(42,36,32,0.22);border-radius:4px;padding:16px 18px;}
+  .sort-box-label{font-family:ui-monospace,monospace;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:rgba(42,36,32,0.55);margin-bottom:10px;}
+  .sort-box-items{display:flex;flex-wrap:wrap;gap:7px;}
+  .sort-chip{font-size:0.82rem;font-weight:600;color:#1f314d;background:#FFFCF5;border:1px solid rgba(59,167,206,0.45);padding:6px 13px;border-radius:3px;}
+  .sort-chip-alt{border-style:dashed;border-color:rgba(42,36,32,0.3);color:#5C5347;}
+  .sort-box-note{font-size:0.82rem;color:#5C5347;line-height:1.6;margin-top:12px;font-style:italic;}
+
+  /* phase 1: project log template */
+  .tool-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;margin-top:16px;}
+  .tool-tab{background:#F6F1E6;border:1px solid rgba(42,36,32,0.12);border-top:3px solid #3ba7ce;border-radius:3px;padding:14px 15px;}
+  .tool-tab-name{font-family:ui-monospace,monospace;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1f314d;margin-bottom:6px;}
+  .tool-tab-desc{font-size:0.83rem;color:#5C5347;line-height:1.55;}
+  a.tool-download{margin-top:18px;text-decoration:none;}
+
   .phases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:13px;margin-top:14px;align-items:stretch;}
   .phase-tile{background:#FFFCF5;border:1px solid rgba(42,36,32,0.14);border-radius:4px;padding:18px 19px 14px;cursor:pointer;transition:transform 0.12s,box-shadow 0.12s;position:relative;display:flex;flex-direction:column;height:100%;}
   .phase-tile:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(42,36,32,0.12);}
@@ -272,6 +292,63 @@
       <div class="skills-assessed"><div class="skills-label">Skills You'll Be Developing</div>
             <span class="skill-tag">Analytical Thinking</span>
           </div>
+    </section>
+
+    <section class="dossier-card">
+      <div class="eyebrow section-eyebrow">The Fixed List</div>
+      <h2>The 12 mechanisms</h2>
+      <p class="build-desc">Build or set up every one of these and test it yourself. The order below is just the order they're listed in — it tells you nothing about which function type fits which mechanism. That part is your job to figure out.</p>
+      <ol class="mech-list">
+        <li><span class="mech-num">01</span><span class="mech-name">Lever</span></li>
+        <li><span class="mech-num">02</span><span class="mech-name">Wheel and Axle</span></li>
+        <li><span class="mech-num">03</span><span class="mech-name">Pulley</span></li>
+        <li><span class="mech-num">04</span><span class="mech-name">Inclined Plane</span></li>
+        <li><span class="mech-num">05</span><span class="mech-name">Wedge</span></li>
+        <li><span class="mech-num">06</span><span class="mech-name">Screw</span></li>
+        <li><span class="mech-num">07</span><span class="mech-name">Pendulum</span></li>
+        <li><span class="mech-num">08</span><span class="mech-name">Free-Falling / Dropped Object</span></li>
+        <li><span class="mech-num">09</span><span class="mech-name">Rolling Ball on Curved / Ramped Track</span></li>
+        <li><span class="mech-num">10</span><span class="mech-name">Bouncing Ball</span></li>
+        <li><span class="mech-num">11</span><span class="mech-name">Spring / Coil Release</span></li>
+        <li><span class="mech-num">12</span><span class="mech-name">Rolling / Unrolling Spool</span></li>
+      </ol>
+      <div class="sort-box">
+        <div class="sort-box-label">Sort each one into</div>
+        <div class="sort-box-items">
+          <span class="sort-chip">Quadratic</span>
+          <span class="sort-chip">Exponential decay</span>
+          <span class="sort-chip">Rational / inverse variation</span>
+          <span class="sort-chip">Trigonometric</span>
+          <span class="sort-chip sort-chip-alt">None fit cleanly</span>
+        </div>
+        <p class="sort-box-note">These are labels to sort into, not definitions to look up. You're deciding by what you observe, not by what the words mean — the math names come later, in Certification.</p>
+      </div>
+    </section>
+
+    <section class="dossier-card">
+      <div class="eyebrow section-eyebrow">Your Tools</div>
+      <h2>Project Log</h2>
+      <p class="build-desc">One workbook you'll use for the whole project — not just Phase 1. Make your own copy, put your name on it, and keep it open every session.</p>
+      <div class="tool-tabs">
+        <div class="tool-tab">
+          <div class="tool-tab-name">Progress</div>
+          <div class="tool-tab-desc">Every session, all four phases. Your goal before you start, what you got done, and the homework you assign yourself.</div>
+        </div>
+        <div class="tool-tab">
+          <div class="tool-tab-name">Inquiries</div>
+          <div class="tool-tab-desc">Questions that come up any time in the project, what you found out, and whether it's still open.</div>
+        </div>
+        <div class="tool-tab">
+          <div class="tool-tab-name">Orientation</div>
+          <div class="tool-tab-desc">Phase 1 only. The 12 mechanisms, your evidence, your match, and what changed your mind.</div>
+        </div>
+      </div>
+      <!-- ===================================================================
+           TEACHER: this points at the shared Google Sheet. To give each student
+           their OWN copy instead of sending everyone into the same file, swap
+           the tail of the URL from /edit?usp=sharing to /copy
+           =================================================================== -->
+      <a class="artifact-trigger tool-download" href="https://docs.google.com/spreadsheets/d/1dNVYd__3Q90y08HPH4QgcfIgQlVHUtxreRzv-u28sVQ/edit?usp=sharing" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg> Open the Project Log</a>
     </section>
   </div>
   <div class="page-footer">Goldberg's Novelty Installations: The Three C Wondermachine</div>
